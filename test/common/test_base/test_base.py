@@ -21,7 +21,7 @@ class TestBase(TestCase):
         cls.testbed.activate()
 
         # Select all the needed service stubs
-        cls.testbed.init_datastore_v3_stub(datastore_file='tmp/datastore.sqlite', use_sqlite=True)
+        cls.testbed.init_datastore_v3_stub(datastore_file='/tmp/datastore.sqlite', use_sqlite=True)
         cls.testbed.init_memcache_stub()
 
     @classmethod

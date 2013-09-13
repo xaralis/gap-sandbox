@@ -22,12 +22,10 @@ def run_all(argv=None):
     sys.exitfunc = lambda msg = 'Process shutting down...': sys.stderr.write(msg + '\n')
 
     argv  = (set(argv) | {
-        '--where=%s' % dirname(abspath(src.__file__)),
-        '-c nose.cfg',
         '--with-gae',
         '--gae-application=%s' % dirname(abspath(src.__file__)),
         '--verbose',
-        '--without-sandbox'
+        '--without-sandbox',
     }) - {'./run_tests.py'}
 
     logging.debug('Running tests with arguments: %r' % argv)
