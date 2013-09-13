@@ -19,7 +19,7 @@
 __author__ = 'Robin Gottfried <google@kebet.cz>'
 
 """
-Simple pip wraper to work with virtual environment and google app engine.
+Simple pip wrapper to work with virtual environment and google app engine.
 
 Use it the same way as pip. Each time gip is called, it updates symlinks to you application src/lib.
 
