@@ -10,8 +10,12 @@ libraries:
 - name: jinja2
   version: latest
 
+includes:
+- lib/datastoreadmin
+
 handlers:
 - url: /static  # configured in config.py as well
   static_dir: static
 - url: /.*
   script: app.handler  # main app handler (uses app.routes to get main routes)
+
